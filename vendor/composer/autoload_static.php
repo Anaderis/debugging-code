@@ -13,7 +13,7 @@ class ComposerStaticInitef7ca93303ad7b2a5bea9f6f47aaf6fb
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInitef7ca93303ad7b2a5bea9f6f47aaf6fb::$classMap;
+            $loader->classMap = ComposerStaticInitef7ca93303ad7b2a5bea9f6f47aaf6fb::$classMap; //Ruben : Propriété non défini ($classMap)
 
         }, null, ClassLoader::class);
     }
