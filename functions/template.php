@@ -17,3 +17,6 @@ if (!defined('TEMPLATE_PATH')) {
 function template(string $file_name, array $data = array('title' => 'PHPCrud')) {
     return get_file($file_name, TEMPLATE_PATH, $data); 
 }
+
+// //Todo Supprimez le paramètre de typage strict s'il n'est pas nécessaire pour votre projet.
+// Si un typage strict est nécessaire, envisagez de spécifier un type de retour qui représente le type de retour attendu de la fonction get_file( ).
