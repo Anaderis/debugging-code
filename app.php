@@ -8,7 +8,7 @@ if (!defined('FUNC')) {
 }
 
 // Load includer function
-require_once FUNC . '/includer.php';
+require_once (FUNC . '/includer.php');
 
 // Charge la connexion à la base de données
 get_file('connection', FUNC);
