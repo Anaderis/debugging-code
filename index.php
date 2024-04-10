@@ -7,6 +7,6 @@ if (!defined('ROOT_PATH')) {
 // Load the core function
 require_once (ROOT_PATH . 'app.php');
 
-template('index.php');
+template('index');
 
 ?>
