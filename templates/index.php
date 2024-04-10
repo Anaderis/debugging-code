@@ -22,8 +22,7 @@ try {
 
     if($request_uri == "/debugging-code/") {
         $request_uri = '/home';
-
-    }
+     }
 
 
     $requested_route = formate_route($request_uri);
