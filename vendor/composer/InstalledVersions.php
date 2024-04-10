@@ -14,7 +14,7 @@ namespace Composer;
 
 use Composer\Semver\VersionParser;
 
-
+require './vendor/autoload.php';
 
 
 
