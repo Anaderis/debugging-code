@@ -15,5 +15,5 @@ if (!defined('TEMPLATE_PATH')) {
  * @return template file, wich is included by  wpf_include function that stored on ./functions/includer.php. //Ruben : Class inconnue (template)
  */
 function template(string $file_name, array $data = array('title' => 'PHPCrud')) {
-    return get_file($file_name, TEMPLATE_PATH, $data);  //Ruben : la valeur retournée devrait être un type template
+    return get_file($file_name, TEMPLATE_PATH, $data); 
 }
