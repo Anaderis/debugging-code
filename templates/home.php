@@ -1,4 +1,6 @@
 <?php
+
+
 template('header', array(
     'title' => 'Boite à outils • Accueil',
 ));

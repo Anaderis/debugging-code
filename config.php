@@ -10,6 +10,6 @@ return array(
     'host' => 'localhost',
     'user' => 'root',
     'password' => '',
-    'port'=> 8889,
+    'port'=> 3366,
     'name' => 'mytoolbox'
 );
