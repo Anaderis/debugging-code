@@ -7,9 +7,9 @@
 
 // Pourquoi pas utiliser un .ENV ?
 return array(
-    'host' => '127.0.0.1',
+    'host' => 'localhost',
     'user' => 'root',
-    'password' => 'root',
+    'password' => '',
     'port'=> 8889,
-    'name' => 'phptoolbox'
+    'name' => 'mytoolbox'
 );
