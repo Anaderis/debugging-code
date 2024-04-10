@@ -103,4 +103,33 @@ template('header', array(
     }); //Ruben : Problème de virgules / parenthèse a la con
 </script>
 
+<script type="text/javascript">
+    window.addEventListener('load', () => {
+        let forms = document.forms;
+
+        for (form of forms) {
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                const formData = new FormData(event.target).entries();
+
+                const response = await fetch('/api/post', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(
+                        Object.assign(Object.fromEntries(formData), { form: event.target.name })
+                    )
+                });
+
+                const result = await response.json();
+
+                let inputName = Object.keys(result.data)[0];
+
+                event.target.querySelector(`input[name="${inputName}"]`).value = result.data[inputName];
+            });
+        }
+    });
+</script>
+
+
 <?php template('footer');
