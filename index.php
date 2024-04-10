@@ -8,3 +8,5 @@ if (!defined('ROOT_PATH')) {
 require_once ROOT_PATH . 'app.php';
 
 template('index');
+
+?>
