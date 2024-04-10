@@ -17,9 +17,9 @@ try {
         '/api/post',
     ));
 
-    if($request_uri == "/") {
-        $request_uri = '/home';
-    }
+    // if($request_uri == "/") {
+    //     $request_uri = '/home';
+    // }
 
     $requested_route = formate_route($request_uri);
 
