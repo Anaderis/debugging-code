@@ -1,5 +1,8 @@
 <?php
 
+
+require_once ('./functions/router.php');   //<---------- Nathan: Pour Les fonction get-server et register_route
+
 if (!session_id()) session_start();
 try {
     $request_uri = get_server('request_uri');
@@ -17,9 +20,9 @@ try {
         '/api/post',
     ));
 
-    if($request_uri == "/") {
+    // if($request_uri == "/") {
         $request_uri = '/home';
-    }
+    // }
 
     $requested_route = formate_route($request_uri);
 
