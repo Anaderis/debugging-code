@@ -24,7 +24,7 @@ function has_file(string $file_name, string $directory = null) {
  * @param string directory
  * @param array data to be sent
  *
- * @return the file wich included by
+ * @return the file wich included by //Ruben : class inconnue(the)
  * include_once function.
  */
 function get_file(string $file_name, string $directory = null, array $data = array()) {
