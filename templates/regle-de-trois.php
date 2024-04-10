@@ -100,7 +100,7 @@ template('header', array(
 
                 event.target.querySelector(`input[name="${inputName}"]`).value = result.data[inputName];
         }
-    });
+    }); //Ruben : Problème de virgules / parenthèse a la con
 </script>
 
 <?php template('footer');

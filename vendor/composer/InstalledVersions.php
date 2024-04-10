@@ -82,7 +82,7 @@ return isset(self::$installed['versions'][$packageName]);
 
 
 
-
+//Ruben : Type non défini (VersionParser)
 public static function satisfies(VersionParser $parser, $packageName, $constraint)
 {
 $constraint = $parser->parseConstraints($constraint);
