@@ -1,7 +1,7 @@
 <?php
 
 
-// require_once ('./functions/router.php');   //<---------- Nathan: Pour Les fonction get-server et register_route
+// require_once ('./functions/router.php');   //<---------- Nathan: Fonction get-server et register_route
 
 if (!session_id()) session_start();
 try {
