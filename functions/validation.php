@@ -3,7 +3,9 @@
 function sanitize($item, $type) {
     switch($type) {
         case 'string':
+
             $item = filter_var($item, FILTER_SANITIZE_FULL_SPECIAL_CHARS); 
+
             break;
         case 'email':
             $item = filter_var($item, FILTER_SANITIZE_EMAIL);
