@@ -118,9 +118,8 @@ template('header', array(
                 let inputName = Object.keys(result.data)[0];
 
                 event.target.querySelector(`#${inputName}`).innerHTML= result.data[inputName];
-
-            })
-        }
+        });
+    }
     });
 </script>
 
