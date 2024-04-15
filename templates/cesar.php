@@ -94,8 +94,8 @@ template('header', array(
         </div>
 </section>
 
-
-<script type="text/javascript">
+<!-- La tambouille de Samuel, Bidouillage d'api avec les fonctions de calculations.php -->
+ <script type="text/javascript">
     window.addEventListener('load', () => {
         let forms = document.forms;
 
@@ -122,6 +122,5 @@ template('header', array(
     }
     });
 </script>
-
 
 <?php template('footer');
