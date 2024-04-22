@@ -56,7 +56,7 @@ if (!empty($_POST)) {
 
 <!-- ======= About Section ======= -->
 <section id="homepage" class="homepage">
-    <div class="container">
+    <div class="container w-75">
         <div class="section-title">
             <h2>La boite à outils </h2>
             <p>La boite à outils est un site accessible 24h/24 et 7j/7 qui vous permet de réaliser un bon nombre de
@@ -120,7 +120,7 @@ if (!empty($_POST)) {
                         </div>
                         <div class="col-md-6">
                             <div class="text-center text-md-start">
-                                <button type="submit" class="btn  btn-block btn-primary">Envoyer</button>
+                                <button type="submit" class="btn  btn-block btn-primary w-100">Envoyer</button>
                             </div>
                         </div>
                     </div>
