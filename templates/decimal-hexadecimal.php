@@ -5,7 +5,7 @@
 ?>
 
 <section id="homepage" class="homepage">
-    <div class="container">
+    <div class="container w-75">
         <div class="section-title">
             <h2>Convertisseur système décimal positif en binaire </h2>
         </div>
@@ -27,22 +27,22 @@
             <fieldset class="col-6 mt-4">
                 <legend>Convertisseur</legend>
                 <form action="" name="decimal-hexadecimal">
-                    <div class="form-group row">
-                        <div class="col-12">
+                    <div class="form-group row my-4">
+                        <div class="col-12 my-2">
                             <label for="decimal">Décimal</label>
                             <div class="input-group">
                                 <input id="decimal" name="decimal" type="number" min="0" class="form-control" required>
                             </div>
                         </div>
 
-                        <div class="col-12">
+                        <div class="col-12 my-2">
                             <label for="hex">Héxadécimal</label>
                             <div class="input-group">
                                 <input id="hex" name="hex" type="text"  class="form-control" disabled>
                             </div>
                         </div>
 
-                        <div class="col-12">
+                        <div class="col-12 my-2">
                             <label for="binary">Binaire</label>
                             <div class="input-group">
                                 <input id="binary" name="binary" type="text" min="0" class="form-control" disabled>
