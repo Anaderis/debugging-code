@@ -43,6 +43,9 @@
             $index = $reverse ? $index - $key : $index + $key;
             if($index > 25){
                 $index = $index - 26;
+            } else {
+                $index = $index + 26;
+
             }
             $result .= $alphabet[$index];
         }

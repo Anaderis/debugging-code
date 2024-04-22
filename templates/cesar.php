@@ -94,8 +94,8 @@ template('header', array(
         </div>
 </section>
 
-
-<script type="text/javascript">
+<!-- La tambouille de Samuel, Bidouillage d'api avec les fonctions de calculations.php -->
+ <script type="text/javascript">
     window.addEventListener('load', () => {
         let forms = document.forms;
 
@@ -118,11 +118,9 @@ template('header', array(
                 let inputName = Object.keys(result.data)[0];
 
                 event.target.querySelector(`#${inputName}`).innerHTML= result.data[inputName];
-
-            })
-        }
+        });
+    }
     });
 </script>
-
 
 <?php template('footer');
