@@ -43,7 +43,7 @@
             $index = $reverse ? $index - $key : $index + $key;
             if($index > 25){
                 $index = $index - 26;
-            } else {
+            } else if($index<0){
                 $index = $index + 26;
 
             }
@@ -54,7 +54,9 @@
             return [
                 'clear' => $result,
             ];
-        } else {
+        } 
+        
+        else {
             return [
                 'result' => $result,
             ];
