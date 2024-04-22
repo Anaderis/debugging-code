@@ -51,6 +51,15 @@ if (!empty($_POST)) {
             $messages['success'][] = 'Message envoyé !';
         }
     }
+
+    $to = "laragonlelefan@gmail.com";
+    $subject = $submited_items['subject'];
+    $message = $submited_items['message'];
+
+
+    mail(
+        $to, $subject, $message
+    );
 }
 ?>
 
