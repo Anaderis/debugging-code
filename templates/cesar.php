@@ -102,12 +102,11 @@ template(
     </div>
 </section>
 
-<!-- La tambouille de Samuel, Bidouillage d'api avec les fonctions de calculations.php -->
 <script type="text/javascript">
-    window.addEventListener('load', () => {
+        window.addEventListener('load', () => {
         let forms = document.forms;
 
-        for (form of forms) {
+        for(form of forms){
             form.addEventListener('submit', async (event) => {
                 event.preventDefault();
 
@@ -117,7 +116,7 @@ template(
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(
-                        Object.assign(Object.fromEntries(formData), { form: event.target.name })
+                        Object.assign(Object.fromEntries(formData), {form: event.target.name})
                     )
                 });
 
@@ -125,10 +124,10 @@ template(
 
                 let inputName = Object.keys(result.data)[0];
 
-                event.target.querySelector(input[name = "${inputName}"]).value = result.data[inputName];
-            });
-        }
+                event.target.querySelector(`#${inputName}`).innerHTML= result.data[inputName];
+        })
+    }
     });
-</script>
+    </script>
 
 <?php template('footer');

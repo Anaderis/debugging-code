@@ -10,4 +10,4 @@ require_once (ROOT_PATH . 'app.php');
 
 template('index');
 
-?>
+
