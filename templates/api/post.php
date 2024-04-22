@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
  * GET BODY
  * */
 $json = file_get_contents('php://input');
-$body = json_decode($json); // Converts it into a PHP object
+$body = json_decode($json); // Convert  s it into a PHP object
 $result = null;
 if($body === null){
     $data = [

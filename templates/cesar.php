@@ -105,7 +105,7 @@ template('header', array(
 
                 const formData = new FormData(event.target).entries()
 
-                const response = await fetch('/api/post', {
+                const response = await fetch('http://debugging-code.local/api/post', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(
