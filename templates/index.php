@@ -20,7 +20,7 @@ try {
         '/api/post',
     ));
 
-    if($request_uri == "/debugging-code/") {
+    if($request_uri == "/") {
         $request_uri = '/home';
      }
 
