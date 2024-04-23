@@ -11,12 +11,12 @@ Formulaire de contact
 
 Pouvez-vous faire en sorte que le formulaire de contact nous envoie un email ? De plus, la validation du formulaire est un peu violente.. pouvez-vous l'adoucir et rendre le formulaire plus "user friendly" ?
 
-Choisir sa device
+Choisir sa device            --------------  Ok
 
 Un utilisateur nous a demandé de pouvoir choisir sa devise (ex: CAD vers JPY / GBP vers USD) dans le formulaire euro-dollars.
 Optimisations
 
-Bootstrap
+Bootstrap           --------------  Ok
 
 Bootstrap, comme de nombreuses librairies, semble être chargé depuis un CDN. Il serait préférable de le télécharger et de le charger localement. Qu'en pensez-vous ?
 
@@ -25,6 +25,7 @@ J'ai aussi remarqué que bootstrap est en version 4 alors que la version 5 est s
 Librairies
 
 J'ai l'impression que certaines librairies ne sont pas utilisées. Pouvez-vous vérifier et supprimer celles qui ne sont pas nécessaires ?
+
 
 Code front et back Il y a beaucoup de code inutile dans le projet.
 

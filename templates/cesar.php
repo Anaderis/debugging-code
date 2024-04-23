@@ -35,7 +35,7 @@ template(
         </div>
 
         <div class="row d-flex justify-content-around">
-            <fieldset class="col-5 mt-4">
+            <fieldset class="col-md-5 col-12 mt-4">
                 <legend>Chiffrer</legend>
                 <form action="" method="POST" name="cesar">
                     <div class="form-group row">
@@ -67,7 +67,7 @@ template(
                 </form>
             </fieldset>
 
-            <fieldset class="col-5 mt-4 ">
+            <fieldset class="col-md-5 col-12 mt-4">
                 <legend>Déchiffrer</legend>
                 <form action="" method="POST" name="cesar">
                     <div class="form-group row">
