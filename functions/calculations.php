@@ -97,8 +97,7 @@
         $converted_amount = $money * $rate;
 
         return [
-            $currency2, 
-            $converted_amount 
+            $currency2 => $converted_amount,
         ];
     }
 

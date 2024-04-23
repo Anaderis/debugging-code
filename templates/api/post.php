@@ -115,19 +115,16 @@ switch ($body->form){
 
     case 'currency-choice':
 
-        $money = $_POST['money'];
-        $currency1 = $_POST['currency1'];
-        $currency2 = $_POST['currency2'];
+        $money = $body->money;
+        $currency1 = $body->currency1;
+        $currency2 = $body->currency2;
 
         $result = convertCurrency($money,$currency1, $currency2);
 
         $data = [
             'response' => 'success',
             'message' => 'Calcul réussi',
-            'data' => [
-                'result' => $converted_amount,
-                'currency2' => $currency2
-            ]
+            'data' => $result
         ];
 
         echo json_encode($data);
