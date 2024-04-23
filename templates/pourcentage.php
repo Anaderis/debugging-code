@@ -6,7 +6,7 @@ template('header', array(
 
     <!-- ======= About Section ======= -->
 <section id="homepage" class="homepage">
-    <div class="container">
+    <div class="container w-75">
         <div class="section-title">
             <h2>Calcul de pourcentage </h2>
             <p>La calculatrice de pourcentage vous permez de calculez facilement le pourcentage de n’importe quel chiffre avec la calculatrice de pourcentage en ligne, une calculatrice utile et simple à utiliser.</p>
@@ -17,7 +17,7 @@ template('header', array(
             <fieldset class="col-12 mt-4">
                 <legend>Calculer la quantité</legend>
                 <form action="" method="POST" name="percent">
-                    <div class="form-group row">
+                    <div class="form-group row my-4">
                         <div class="col-2">
                             <label for="percent" aria-hidden="true" hidden>Pourcentage</label>
                             <div class="input-group">
@@ -37,19 +37,19 @@ template('header', array(
                             </div>
                         </div>
 
-                        <div class="d-inline-flex align-items-center ">
+                        <div class="d-inline-flex align-items-center col-1">
                             <span class="ver">=</span>
                         </div>
 
                         <div class="col-3">
                             <label for="result" aria-hidden="true" hidden>Résultat</label>
                             <div class="input-group">
-                                <input id="result" name="result" type="text" class="form-control" disabled>
+                                <input id="result" name="result" type="text" class="form-control w-100" disabled>
                             </div>
                         </div>
 
-                        <div class="col">
-                            <button name="submit" type="submit" class="btn btn-primary btn-block">Calculer</button>
+                        <div class="col-4">
+                            <button name="submit" type="submit" class="btn btn-primary btn-block w-100 ">Calculer</button>
                         </div>
                     </div>
                 </form>
@@ -59,7 +59,7 @@ template('header', array(
             <fieldset class="col-12 mt-4">
                 <legend>Calculer le nombre initial</legend>
                 <form action="" method="POST" name="percent">
-                    <div class="form-group row">
+                <div class="form-group row my-4">
                         <div class="col-2">
                             <label for="result" aria-hidden="true" hidden>Nombre</label>
                             <div class="input-group">
@@ -68,7 +68,7 @@ template('header', array(
                         </div>
 
 
-                        <div class="d-inline-flex align-items-center ">
+                        <div class="d-inline-flex align-items-center col-1 ">
                             <span class="ver">est le</span>
                         </div>
 
@@ -83,7 +83,7 @@ template('header', array(
                         </div>
 
 
-                        <div class="d-inline-flex align-items-center ">
+                        <div class="d-inline-flex align-items-center col-1">
                             <span class="ver">de</span>
                         </div>
 
@@ -95,8 +95,8 @@ template('header', array(
                             </div>
                         </div>
 
-                        <div class="col">
-                            <button name="submit" type="submit" class="btn btn-primary btn-block">Calculer</button>
+                        <div class="col-3">
+                            <button name="submit" type="submit" class="btn btn-primary btn-block w-100">Calculer</button>
                         </div>
                     </div>
                 </form>
@@ -105,7 +105,7 @@ template('header', array(
             <fieldset class="col-12 mt-4">
                 <legend>Calculer le pourcentage</legend>
                 <form action="" method="POST" name="percent">
-                    <div class="form-group row">
+                    <div class="form-group row my-4">
                         <div class="col-2">
                             <label for="of" aria-hidden="true" hidden>Nombre</label>
                             <div class="input-group">
@@ -114,7 +114,7 @@ template('header', array(
                         </div>
 
 
-                        <div class="d-inline-flex align-items-center ">
+                        <div class="d-inline-flex align-items-center col-1">
                             <span class="ver">est le</span>
                         </div>
 
@@ -129,7 +129,7 @@ template('header', array(
                         </div>
 
 
-                        <div class="d-inline-flex align-items-center ">
+                        <div class="d-inline-flex align-items-center col-1">
                             <span class="ver">de</span>
                         </div>
 
@@ -141,8 +141,8 @@ template('header', array(
                             </div>
                         </div>
 
-                        <div class="col">
-                            <button name="submit" type="submit" class="btn btn-primary btn-block">Calculer</button>
+                        <div class="col-3">
+                            <button name="submit" type="submit" class="btn btn-primary btn-block w-100">Calculer</button>
                         </div>
                     </div>
                 </form>
@@ -174,9 +174,8 @@ template('header', array(
                 let inputName = Object.keys(result.data)[0];
 
                 event.target.querySelector(`input[name="${inputName}"]`).value = result.data[inputName];
-
-            })
-        }
+        });
+    }
     });
 </script>
 

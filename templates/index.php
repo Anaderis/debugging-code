@@ -1,6 +1,9 @@
 <?php
 
-if (!session_id()) session_start();
+
+// require_once ('./functions/router.php');   //<---------- Nathan: Les Fonction get-server et register_route
+
+if (session_id()) session_start();
 try {
     $request_uri = get_server('request_uri');
     $query_string = get_server('query_string');
@@ -19,7 +22,8 @@ try {
 
     if($request_uri == "/") {
         $request_uri = '/home';
-    }
+     }
+
 
     $requested_route = formate_route($request_uri);
 
