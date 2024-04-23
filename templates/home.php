@@ -71,7 +71,7 @@ if (!empty($_POST)) {
             $to, $subject, $message
         );
 
-        // redirect('/home', $status_code = 303);
+    redirect('/home', $status_code = 303);
 
 
    
