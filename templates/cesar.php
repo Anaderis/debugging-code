@@ -9,7 +9,7 @@ template(
 
 <!-- ======= CESAR ======= -->
 <section id="homepage" class="homepage">
-    <div class="container">
+    <div class="container w-75">
         <div class="section-title">
             <h2>Coder ou décoder un texte à l'aide du Code César </h2>
         </div>
@@ -34,8 +34,8 @@ template(
             </figure>
         </div>
 
-        <div class="row justify-content-around">
-            <fieldset class="col-5 mt-4">
+        <div class="row d-flex justify-content-around">
+            <fieldset class="col-md-5 col-12 mt-4">
                 <legend>Chiffrer</legend>
                 <form action="" method="POST" name="cesar">
                     <div class="form-group row">
@@ -48,12 +48,12 @@ template(
 
                         <div class="col-12 mt-4">
                             <label for="key">Clé</label>
-                            <div class="input-group">
+                            <div class="input-group mt-2">
                                 <input id="key" name="key" type="number" class="form-control">
                             </div>
                         </div>
 
-                        <div class="col-12 mt-4">
+                        <div class="col-12 my-4">
                             <label for="result">Résultat</label>
                             <p id="result"></p>
                         </div>
@@ -61,13 +61,13 @@ template(
 
                     <div class="form-group row">
                         <div class="col-12">
-                            <button type="submit" class="btn-block btn btn-primary">Chiffrer</button>
+                            <button type="submit" class="btn-block btn btn-primary mb-3 w-100">Chiffrer</button>
                         </div>
                     </div>
                 </form>
             </fieldset>
 
-            <fieldset class="col-5 mt-4  ms-md-auto">
+            <fieldset class="col-md-5 col-12 mt-4">
                 <legend>Déchiffrer</legend>
                 <form action="" method="POST" name="cesar">
                     <div class="form-group row">
@@ -80,12 +80,12 @@ template(
 
                         <div class="col-12 mt-4">
                             <label for="key">Clé</label>
-                            <div class="input-group">
+                            <div class="input-group mt-2">
                                 <input id="key" name="key" type="number" class="form-control">
                             </div>
                         </div>
 
-                        <div class="col-12 mt-4">
+                        <div class="col-12 my-4">
                             <label for="clear">Résultat</label>
                             <p id="clear"></p>
                         </div>
@@ -93,7 +93,7 @@ template(
 
                     <div class="form-group row">
                         <div class="col-12">
-                            <button type="submit" class="btn-block btn btn-primary">Déchiffrer</button>
+                            <button type="submit" class="btn-block btn btn-primary mb-3 w-100">Déchiffrer</button>
                         </div>
                     </div>
                 </form>
@@ -112,7 +112,7 @@ template(
 
                 const formData = new FormData(event.target).entries()
 
-                const response = await fetch('/api/post', {
+                const response = await fetch('http://debugging-code.local/api/post', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(
