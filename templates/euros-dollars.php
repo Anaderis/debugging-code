@@ -50,42 +50,50 @@ template('header', array(
                 </fieldset>
 
                 <fieldset class="col-12 mt-5">
-                    <legend>Dollar américain vers euro</legend>
-                    <form action="" method="post" name="euros-dollars">
+                    <legend>Test Currency</legend>
+                    <form action="" method="post" name="currency-choice">
                         <div class="form-group row my-3">
                             <div class="col-4">
-                                <label for="USD" aria-hidden="true" hidden>Dollars</label>
+                                <label for="money" aria-hidden="true" hidden>Montant</label>
                                 <div class="input-group">
-                                    <input id="USD" name="USD" type="text" class="form-control" required>
+                                    <input id="money" name="money" type="text" class="form-control" required>
                                     <div class="input-group-append">
-                                        <div class="input-group-text">$</div>
+                                        <select class="form-select" name="currency1" aria-label="Devise 1">
+                                            <option value="USD">USD</option>
+                                            <option value="CAD">CAD</option>
+                                            <option value="EUR">EUR</option>
+                                            <option value="DIR">DIR</option>
+                                        </select>                                    
                                     </div>
                                 </div>
                             </div>
-
                             <div class="d-inline-flex align-items-center col-2">
                                 <span class="ver">vaut actuellement</span>
                             </div>
-
                             <div class="col-4">
-                                <label for="EUR" aria-hidden="true" hidden>Euros</label>
+                                <label for="result" aria-hidden="true" hidden>Résultat</label>
                                 <div class="input-group">
-                                    <input id="EUR" name="EUR" type="text" class="form-control" disabled>
+                                    <input id="result" name="result" type="text" class="form-control" disabled>
                                     <div class="input-group-append">
-                                        <div class="input-group-text">€</div>
+                                        <select class="form-select" name="currency2" aria-label="Devise 2">
+                                            <option value="USD">USD</option>
+                                            <option value="CAD">CAD</option>
+                                            <option value="EUR">EUR</option>
+                                            <option value="DIR">DIR</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="col-2">
                                 <button name="submit" type="submit" class="btn btn-primary btn-block w-100">Calculer</button>
                             </div>
                         </div>
                     </form>
                 </fieldset>
+
                 </div>
             </div>
-    </section><!-- End Home Section -->
+    </section> <!-- End Home Section -->
 
 
     <script type="text/javascript">
