@@ -90,6 +90,7 @@ switch ($body->form){
         ];
         echo json_encode($data);
         break;
+
     case 'euros-dollars':
 
         $EUR = null;
@@ -110,6 +111,25 @@ switch ($body->form){
         ];
         echo json_encode($data);
         break;
+
+
+    case 'currency-choice':
+
+        $money = $body->money;
+        $currency1 = $body->currency1;
+        $currency2 = $body->currency2;
+
+        $result = convertCurrency($money,$currency1, $currency2);
+
+        $data = [
+            'response' => 'success',
+            'message' => 'Calcul réussi',
+            'data' => $result
+        ];
+
+        echo json_encode($data);
+    break;
+
 }
 
 logSubmitToDatabase($body, $result);
