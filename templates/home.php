@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 
 template('header', array(
     'title' => 'Boite à outils • Accueil',
@@ -9,12 +10,20 @@ template('header', array(
 $messages = [];
 // Send contact form to database
 if (!empty($_POST)) {
+
+    // if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['subject']) && !empty($_POST['message']) && isset($_POST['submit'])) {
+    //check if === ""
+    //  break
+    //else
+    //  code envoi mail
+
     $submited_items = array(
         'name' => $_POST['name'],
         'email' => $_POST['email'],
         'subject' => $_POST['subject'],
         'message' => $_POST['message']
     );
+
 
     $validated_items = validate($submited_items, array(
         'name' => array(
@@ -51,7 +60,26 @@ if (!empty($_POST)) {
             $messages['success'][] = 'Message envoyé !';
         }
     }
+
+    $to = "anais.kajjaj@outlook.fr";
+    $subject = $result['subject'];
+    $message = $result['message'];
+   
+    
+    
+    mail(
+            $to, $subject, $message
+        );
+
+    redirect('/home', $status_code = 303);
+
+
+   
+
 }
+
+
+
 ?>
 
 <!-- ======= About Section ======= -->
@@ -66,7 +94,8 @@ if (!empty($_POST)) {
                 simple !</p>
         </div>
 
-        <?php getAlert($messages); ?>
+        <?php getAlert($messages);
+        ?>
 
         <div class="row">
             <div class="col-lg-12 pt-4 pt-lg-0 content">
@@ -120,7 +149,9 @@ if (!empty($_POST)) {
                         </div>
                         <div class="col-md-6">
                             <div class="text-center text-md-start">
-                                <button type="submit" class="btn  btn-block btn-primary w-100">Envoyer</button>
+                                <input type="submit" name="submit-register" value="Register" class="btn  btn-block btn-primary">
+                                <!-- <button type="submit" class="btn  btn-block btn-primary">Envoyer</button> -->
+
                             </div>
                         </div>
                     </div>
@@ -132,4 +163,8 @@ if (!empty($_POST)) {
 </section><!-- End Home Section -->
 
 
-<?php template('footer');
+<?php 
+
+// session_destroy();
+
+template('footer');

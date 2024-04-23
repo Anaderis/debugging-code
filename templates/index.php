@@ -14,6 +14,8 @@ try {
         '/decimal-hexadecimal',
         '/regle-de-trois',
         '/admin',
+        '/mail-sender',
+
         /* ROUTES API */
         '/api/post',
     ));
