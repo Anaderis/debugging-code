@@ -23,7 +23,7 @@ if ($data && isset($data['rates'])) {
             <div class="row">
 
                 <fieldset class="col-12 mt-5">
-                <legend>Test Currency</legend>
+                <legend>Choisissez vos devises</legend>
                 <form action="" method="post" name="currency-choice">
                     <div class="form-group row my-3">
                         <div class="col-4">
@@ -50,7 +50,7 @@ if ($data && isset($data['rates'])) {
                                 <input id="result" name="result" type="text" class="form-control" disabled>
                                 <div class="input-group-append">
                                 <?php  
-                                    echo '<select class="form-select" name="currency2" aria-label="Devise 1">';
+                                    echo '<select class="form-select" name="currency2" aria-label="Devise 2">';
                                         foreach ($currencies as $currency) {
                                             echo '<option value="' . $currency . '">' . $currency . '</option>';
                                         }

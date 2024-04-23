@@ -63,30 +63,6 @@
         }
     }
 
-    function convertEuroDollars($euro = null, $dollars = null){
-        $currency = $euro === null ? 'USD' : 'EUR';
-        $reverseCurrency = $currency === 'EUR' ? 'USD' : 'EUR';
-
-        $url = 'https://open.er-api.com/v6/latest/' . $currency;
-
-        $data = file_get_contents($url);
-        $data = json_decode($data, true);
-        $rate = $data['rates'][$reverseCurrency];
-
-        if($euro === null){
-            $euro = $dollars * $rate;
-            return [
-                'EUR' => $euro,
-            ];
-        }
-        if($dollars === null){
-            $dollars = $euro * $rate;
-            return [
-                'USD' => $dollars,
-            ];
-        }
-    }
-
     function convertCurrency($money, $currency1, $currency2){
         $url = 'https://open.er-api.com/v6/latest/' . $currency1;
        
@@ -100,29 +76,3 @@
             $currency2 => $converted_amount,
         ];
     }
-
-    // function convertCurrency($money,$currency1, $currency2){
-    //     $currency = $currency1;
-    //     $reverseCurrency = $currency2;
-
-    //     $url = 'https://open.er-api.com/v6/latest/' . $currency;
-
-    //     $data = file_get_contents($url);
-    //     $data = json_decode($data, true);
-    //     $rate = $data['rates'][$reverseCurrency];
-
-    //     if($euro === null){
-    //         $euro = $dollars * $rate;
-    //         return [
-    //             'EUR' => $euro,
-    //         ];
-    //     }
-    //     if($dollars === null){
-    //         $dollars = $euro * $rate;
-    //         return [
-    //             'USD' => $dollars,
-    //         ];
-    //     }
-    // }
-
-    // Creer une methode post pour $currency et le $reversecurrency
