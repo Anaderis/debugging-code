@@ -9,7 +9,7 @@ template('header', array(
 
 $messages = [];
 // Send contact form to database
-if (!empty($_POST)) {
+if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['subject']) && !empty($_POST['message'])) {
 
     // if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['subject']) && !empty($_POST['message']) && isset($_POST['submit'])) {
     //check if === ""
@@ -60,21 +60,6 @@ if (!empty($_POST)) {
             $messages['success'][] = 'Message envoyé !';
         }
     }
-
-    $to = "anais.kajjaj@outlook.fr";
-    $subject = $result['subject'];
-    $message = $result['message'];
-   
-    
-    
-    mail(
-            $to, $subject, $message
-        );
-
-    redirect('/home', $status_code = 303);
-
-
-   
 
 }
 
@@ -150,6 +135,16 @@ if (!empty($_POST)) {
                         <div class="col-md-6">
                             <div class="text-center text-md-start">
                                 <input type="submit" name="submit-register" value="Register" class="btn  btn-block btn-primary">
+                                
+                                <?php if(isset($_POST['submit-register'])){
+                                    $to = "anais.kajjaj@outlook.fr";
+                                    $subject = $result['subject'];
+                                    $message = $result['message'];
+
+                                mail($to, $subject, $message);
+                                }
+                                ?>
+    
                                 <!-- <button type="submit" class="btn  btn-block btn-primary">Envoyer</button> -->
 
                             </div>
@@ -166,5 +161,8 @@ if (!empty($_POST)) {
 <?php 
 
 // session_destroy();
+// redirect('/home', $status_code = 303);
 
 template('footer');
+
+
