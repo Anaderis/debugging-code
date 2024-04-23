@@ -26,7 +26,7 @@ if ($data && isset($data['rates'])) {
                 <legend>Choisissez vos devises</legend>
                 <form action="" method="post" name="currency-choice">
                     <div class="form-group row my-3">
-                        <div class="col-4">
+                        <div class="col-lg-4 my-lg-0 my-3">
                             <label for="money" aria-hidden="true" hidden>Montant</label>
                             <div class="input-group">
                                 <input id="money" name="money" type="text" class="form-control" required>
@@ -41,10 +41,10 @@ if ($data && isset($data['rates'])) {
                                 </div>
                             </div>
                         </div>
-                        <div class="d-inline-flex align-items-center col-2">
+                        <div class="d-inline-flex align-items-center col-lg-2 my-lg-0 my-3">
                             <span class="ver">vaut actuellement</span>
                         </div>
-                        <div class="col-4">
+                        <div class="col-lg-4 my-lg-0 my-3">
                             <label for="result" aria-hidden="true" hidden>Résultat</label>
                             <div class="input-group">
                                 <input id="result" name="result" type="text" class="form-control" disabled>
@@ -60,7 +60,7 @@ if ($data && isset($data['rates'])) {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-2">
+                        <div class="col-lg-2 my-lg-0 my-3">
                             <button name="submit" type="submit" class="btn btn-primary btn-block w-100">Calculer</button>
                         </div>
                     </div>

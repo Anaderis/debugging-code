@@ -1,8 +1,6 @@
 <?php
 
 
-// require_once ('./functions/router.php');   //<---------- Nathan: Les Fonction get-server et register_route
-
 if (session_id()) session_start();
 try {
     $request_uri = get_server('request_uri');
