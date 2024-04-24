@@ -1,8 +1,9 @@
 <?php
 template('header', array(
-    'title' => 'Boite à outils • Devise',
+    'title' => 'Boite à outils • Litre',
 ));
 ?>
+
 
     <!-- ======= About Section ======= -->
     <section id="homepage" class="homepage">
@@ -14,33 +15,33 @@ template('header', array(
             <div class="row">
 
                 <fieldset class="col-12 mt-4">
-                    <legend>MilliLitre vers Litre</legend>
+                    <legend>Litre vers MilliLitre</legend>
                     <form action="" method="post" name="ml-litre">
-                        <div class="form-group row">
-                            <div class="col">
-                                <label for="ml" aria-hidden="true" hidden>ml</label>
+                    <div class="form-group row my-3">
+                            <div class="col-lg-4 my-lg-0 my-3">
+                                <label for="ml" aria-hidden="true" hidden>L</label>
                                 <div class="input-group">
                                     <input id="ml" name="ml" type="text" class="form-control" required>
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">ml</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="d-inline-flex align-items-center ">
-                                <span class="ver">vaut actuellement</span>
-                            </div>
-
-                            <div class="col">
-                                <label for="litre" aria-hidden="true" hidden>litre</label>
-                                <div class="input-group">
-                                    <input id="litre" name="litre" type="text" class="form-control" disabled>
                                     <div class="input-group-append">
                                         <div class="input-group-text">L</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-2">
+
+                            <div class="d-inline-flex align-items-center col-lg-2 my-lg-0 my-3">
+                                <span class="ver">vaut actuellement</span>
+                            </div>
+
+                            <div class="col-lg-4 my-lg-0 my-3">
+                                <label for="litre" aria-hidden="true" hidden>ml</label>
+                                <div class="input-group">
+                                    <input id="litre" name="litre" type="text" class="form-control" disabled>
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">ml</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 my-lg-0 my-3">
                                 <button name="submit" type="submit" class="btn btn-primary btn-block">Calculer</button>
                             </div>
 
@@ -50,34 +51,34 @@ template('header', array(
                 </fieldset>
 
                 <fieldset class="col-12 mt-4">
-                    <legend>Litre ver MilliLitre</legend>
+                    <legend>MilliLitre vers Litre</legend>
                     <form action="" method="post" name="ml-litre">
-                        <div class="form-group row">
-                            <div class="col">
-                                <label for="litre" aria-hidden="true" hidden>litre</label>
+                    <div class="form-group row my-3">
+                        <div class="col-lg-4 my-lg-0 my-3">
+                                <label for="litre" aria-hidden="true" hidden>ml</label>
                                 <div class="input-group">
                                     <input id="litre" name="litre" type="text" class="form-control" required>
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">L</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="d-inline-flex align-items-center ">
-                                <span class="ver">vaut actuellement</span>
-                            </div>
-
-                            <div class="col">
-                                <label for="ml" aria-hidden="true" hidden>ml</label>
-                                <div class="input-group">
-                                    <input id="ml" name="ml" type="text" class="form-control" disabled>
                                     <div class="input-group-append">
                                         <div class="input-group-text">ml</div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-2">
+                            <div class="d-inline-flex align-items-center col-lg-2 my-lg-0 my-3">
+                                <span class="ver">vaut actuellement</span>
+                            </div>
+
+                            <div class="col-lg-4 my-lg-0 my-3">
+                                <label for="ml" aria-hidden="true" hidden>L</label>
+                                <div class="input-group">
+                                    <input id="ml" name="ml" type="text" class="form-control" disabled>
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">L</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 my-lg-0 my-3">
                                 <button name="submit" type="submit" class="btn btn-primary btn-block">Calculer</button>
                             </div>
                         </div>

@@ -111,19 +111,27 @@ switch ($body->form){
 
     case 'ml-litre':
 
+    $ml = null;
+    $litre = null;
+
+    if(property_exists($body, 'ml')){
         $ml = $body->ml;
+    }
+    if(property_exists($body, 'litre')){
         $litre = $body->litre;
+    }
 
-        $result = convertLittre($litre,$ml);
+    $result = convertLittre($litre,$ml);
 
-        $data = [
-            'response' => 'success',
-            'message' => 'Calcul réussi',
-            'data' => $result
-        ];
+    $data = [
+        'response' => 'success',
+        'message' => 'Calcul réussi',
+        'data' => $result
+    ];
+    echo json_encode($data);
 
-        echo json_encode($data);
     break;
+    
 
 }
 
