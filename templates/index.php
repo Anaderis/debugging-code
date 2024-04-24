@@ -15,7 +15,7 @@ try {
         '/regle-de-trois',
         '/admin',
         '/litre',
-        '/mail-sender',
+
         /* ROUTES API */
         '/api/post',
     ));
