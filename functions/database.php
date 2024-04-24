@@ -41,6 +41,7 @@ function insert(string $table, array $datas) {
 
     $query = "INSERT INTO {$table} ({$dataColumn}) VALUES ({$dataValues})";
 
+  
     return run_query($query);
 }
 
@@ -72,10 +73,4 @@ function select(string $table, string $column = null, $conditions = array()) {
     }
 }
 
-/**
- *
- */
-function find(string $table, array $conditions) {
-    $result = select($table, null, $conditions);
-    return $result[0];
-}
+

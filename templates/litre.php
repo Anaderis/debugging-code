@@ -45,7 +45,6 @@ template('header', array(
                                 <button name="submit" type="submit" class="btn btn-primary btn-block">Calculer</button>
                             </div>
 
-                            <!--https://fr.calcuworld.com/calculs-mathematiques/calculatrice-pourcentage/-->
                         </div>
                     </form>
                 </fieldset>

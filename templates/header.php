@@ -27,7 +27,7 @@
 </head>
 <body>
 <!-- ======= Mobile nav toggle button ======= -->
-<i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+<i class='bx bx-menu mobile-nav-toggle d-xl-none'></i>
 
 <!-- ======= Header ======= -->
 <header id="header">
@@ -46,7 +46,7 @@
                 <li><a href="<?= home_url(); ?>/litre" class="nav-link scrollto <?= is_current_url('/litre') ? 'active' : '' ?>"><i class="bx bx-water"></i> <span>Convertisseur de litre</span></a></li>
                 <li><a href="<?= home_url(); ?>/pourcentage" class="nav-link scrollto <?= is_current_url('/pourcentage') ? 'active' : '' ?>"><i class="bx bx-book-content"></i> <span>Pourcentage</span></a></li>
                 <li><a href="<?= home_url(); ?>/decimal-hexadecimal" class="nav-link scrollto <?= is_current_url('/decimal-hexadecimal') ? 'active' : '' ?>"><i class="bx bx-server"></i> <span>Décimal en hexadécimal</span></a></li>
-                <li><a href="<?= home_url(); ?>/regle-de-trois" class="nav-link scrollto <?= is_current_url('/regle-de-trois') ? 'active' : '' ?>"><i class='bx bx-ruler'></i></i> <span>Règle de trois</span></a></li>
+                <li><a href="<?= home_url(); ?>/regle-de-trois" class="nav-link scrollto <?= is_current_url('/regle-de-trois') ? 'active' : '' ?>"><i class='bx bx-ruler'></i> <span>Règle de trois</span></a></li>
                 <li><a href="<?= home_url(); ?>/admin" class="nav-link scrollto <?= is_current_url('/admin') ? 'active' : '' ?>"><i class="bx bx-envelope"></i> <span>Espace gestion</span></a></li>
             </ul>
         </nav><!-- .nav-menu -->
