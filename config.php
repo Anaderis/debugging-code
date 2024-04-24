@@ -11,7 +11,7 @@ return array(
     'user' => 'root',
     'password' => '',
 
-    'port' => 3306,
+    'port' => 3366,
 
     'name' => 'mytoolbox'
 );
