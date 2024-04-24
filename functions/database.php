@@ -40,8 +40,6 @@ function insert(string $table, array $datas) {
     $dataValues = rtrim($dataValues,',');
 
     $query = "INSERT INTO {$table} ({$dataColumn}) VALUES({$dataValues})";
-    mysqli_stmt_bind_param($stmt, "ssssssss", $randomId, $emailregister, $passwordregister, $Userregister, $usertype, $file, $photo, $gamename);
-
     return run_query($query);
 }
 
@@ -73,10 +71,4 @@ function select(string $table, string $column = null, $conditions = array()) {
     }
 }
 
-/**
- *
- */
-function find(string $table, array $conditions) {
-    $result = select($table, null, $conditions);
-    return $result[0];
-}
+
