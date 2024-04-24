@@ -76,3 +76,20 @@
             $currency2 => $converted_amount,
         ];
     }
+
+    function convertLittre($litre = null, $ml = null){
+
+        if($litre === null){
+            $litre = $ml * 1000;
+            return [
+                'litre' => $litre,
+            ];
+        }
+        if($ml === null){
+            $ml = $litre / 1000;
+            return [
+                'ml' => $ml,
+            ];
+        }
+    }
+    
