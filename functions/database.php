@@ -40,6 +40,8 @@ function insert(string $table, array $datas) {
     $dataValues = rtrim($dataValues,',');
 
     $query = "INSERT INTO {$table} ({$dataColumn}) VALUES({$dataValues})";
+
+  
     return run_query($query);
 }
 

@@ -9,7 +9,7 @@ template('header', array(
 
 $messages = [];
 // Send contact form to database
-if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['subject']) && !empty($_POST['message'])) {
+if (!empty($_POST)) {
 
     // if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['subject']) && !empty($_POST['message']) && isset($_POST['submit'])) {
     //check if === ""
@@ -50,8 +50,10 @@ if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['subject'
         )
     )
     );
+    
+// Vérifier si la validation a réussi
+$result = check_validation($validated_items);
 
-    $result = check_validation($validated_items);
 
     if (!is_passed($result)) {
         $messages = $result;
@@ -59,6 +61,8 @@ if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['subject'
         if (insert('admin_messages', $result)) {
             $messages['success'][] = 'Message envoyé !';
         }
+
+
     }
 
 }
