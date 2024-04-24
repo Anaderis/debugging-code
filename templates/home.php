@@ -54,23 +54,16 @@ if (!empty($_POST)) {
 // Vérifier si la validation a réussi
 $result = check_validation($validated_items);
 
-if (!is_passed($result)) {
-    $messages = $result;
-} else {
-    // Connexion à la base de données
-    $connection  = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
-    if (mysqli_connect_errno()) {
-        throw new Exception("Database connection failed: " . mysqli_connect_error());
+
+    if (!is_passed($result)) {
+        $messages = $result;
+    } else {
+        if (insert('admin_messages', $result)) {
+            $messages['success'][] = 'Message envoyé !';
+        }
+
+
     }
-
-    // Utiliser la fonction insert avec les données validées du formulaire
-    if(insert($connection, 'admin_messages', $result)) {
-        $messages['success'][] = 'Message envoyé !';
-    }
-
-    mysqli_close($connection); // Fermer la connexion après utilisation
-}
-
 
 }
 
