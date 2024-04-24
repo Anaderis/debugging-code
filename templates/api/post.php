@@ -91,28 +91,6 @@ switch ($body->form){
         echo json_encode($data);
         break;
 
-    case 'euros-dollars':
-
-        $EUR = null;
-        $USD = null;
-        if(property_exists($body, 'EUR')){
-            $EUR = $body->EUR;
-        }
-        if(property_exists($body, 'USD')){
-            $USD = $body->USD;
-        }
-
-        $result = convertEuroDollars($EUR, $USD);
-
-        $data = [
-            'response' => 'success',
-            'message' => 'Calcul réussi',
-            'data' => $result
-        ];
-        echo json_encode($data);
-        break;
-
-
     case 'currency-choice':
 
         $money = $body->money;
@@ -129,6 +107,31 @@ switch ($body->form){
 
         echo json_encode($data);
     break;
+
+
+    case 'ml-litre':
+
+    $ml = null;
+    $litre = null;
+
+    if(property_exists($body, 'ml')){
+        $ml = $body->ml;
+    }
+    if(property_exists($body, 'litre')){
+        $litre = $body->litre;
+    }
+
+    $result = convertLittre($litre,$ml);
+
+    $data = [
+        'response' => 'success',
+        'message' => 'Calcul réussi',
+        'data' => $result
+    ];
+    echo json_encode($data);
+
+    break;
+    
 
 }
 
