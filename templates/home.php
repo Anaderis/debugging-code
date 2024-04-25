@@ -18,10 +18,10 @@ if (!empty($_POST)) {
     //  code envoi mail
 
     $submited_items = array(
-        'name' => $_POST['name'],
-        'email' => $_POST['email'],
-        'subject' => $_POST['subject'],
-        'message' => $_POST['message']
+        'name' => htmlspecialchars($_POST['name']),
+        'email' => htmlspecialchars($_POST['email']),
+        'subject' => htmlspecialchars($_POST['subject']),
+        'message' => htmlspecialchars($_POST['message'])
     );
 
 
@@ -138,14 +138,15 @@ $result = check_validation($validated_items);
                         </div>
                         <div class="col-md-6">
                             <div class="text-center text-md-start">
-                                <input type="submit" name="submit-register" value="Register" class="btn  btn-block btn-primary">
+                                <input type="submit" name="submit-register" value="Envoyer" class="btn  btn-block btn-primary">
                                 
                                 <?php if(isset($_POST['submit-register'])){
                                     $to = "anais.kajjaj@outlook.fr";
-                                    $subject = $result['subject'];
-                                    $message = $result['message'];
+                                    $subject = htmlspecialchars_decode($result['subject']);
+                                    $message = htmlspecialchars_decode($result['message']);
 
                                 mail($to, $subject, $message);
+
                                 }
                                 ?>
     
