@@ -89,7 +89,7 @@ De nombreuse librairie sont utiliser a la demande du client nous avons deux tach
 
     Verifier les librairies présente et les enlever si necessaire.
 
-    //Tache en cour
+    //Tache fini réalisé par Nathan : Suppression de Fontawesome et AOS
 
 
 
