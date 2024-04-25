@@ -56,6 +56,7 @@ switch ($body->form){
         ];
         echo json_encode($data);
         break;
+
     case 'regle-de-trois':
         $a = $body->a;
         $b = $body->b;
@@ -70,6 +71,7 @@ switch ($body->form){
         ];
         echo json_encode($data);
         break;
+
     case 'cesar':
         $reverse = false;
         $text = '';
@@ -130,6 +132,24 @@ switch ($body->form){
     ];
     echo json_encode($data);
 
+    break;
+
+    case 'decimal-hexadecimal':
+
+        $decimal = $body->decimal;
+        $hex = $body->hexadecimal;
+        $binary = $body->binary;
+
+        $result = "$hex . $binary";
+ 
+
+        $data = [
+            'response' => 'success',
+            'message' => 'Calcul réussi',
+            'data' => $result
+        ];
+
+        echo json_encode($data);
     break;
     
 
