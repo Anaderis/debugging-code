@@ -136,11 +136,14 @@ switch ($body->form){
 
     case 'decimal-hexadecimal':
 
-        $decimal = $body->decimal;
-        $hex = $body->hexadecimal;
-        $binary = $body->binary;
+       if(property_exists($body,'decimal')){
+            $decimal = $body->decimal;
+       }
 
-        $result = "$hex . $binary";
+       $hex = convertToHexadecimal($decimal);
+       $bin = convertToBinary($decimal);
+
+        $result = [$hex, $bin];
  
 
         $data = [
