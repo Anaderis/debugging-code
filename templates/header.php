@@ -27,7 +27,7 @@
 </head>
 <body>
 <!-- ======= Mobile nav toggle button ======= -->
-<i class='bx bx-menu mobile-nav-toggle d-xl-none'></i>
+<i class='mobile-nav-toggle bx bx-menu d-xl-none'></i>
 
 <!-- ======= Header ======= -->
 <header id="header">
