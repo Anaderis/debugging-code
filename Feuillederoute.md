@@ -69,7 +69,7 @@ A la demande du client des fonctionalités son demandé d'être ajouté au site.
 
     Demande que l'envoie des form ce fassent coté serveur, c'est actuellement le cas pour toute les pages excepté la decimal-hexa.
 
-    //Tache en cour
+    //Tache fini réalisé par Anais :
 
 
 
@@ -94,7 +94,16 @@ De nombreuse librairie sont utiliser a la demande du client nous avons deux tach
 
 
 
-*5eme tri et mise au propre*
+*5eme Etape Variable d'environnement*
+
+
+Enregistrement des variables d'environnement dans un fichier .env
+
+    //Tache en cour réalisé par Sam
+
+
+
+*6eme tri et mise au propre*
 
 
 Du code front et back, sont inutiliser dans le projet. L'objectif est d'essayer de faire le tri pour rendre un code propre. 
@@ -107,10 +116,11 @@ Liste du nettoyage :
 
 
 
-*6eme Compatibilité navigateurs et W3C*
+*7eme Compatibilité navigateurs et W3C*
 
 Verification de la compatibilité du navigateur et w3c 
 
-
+    //W3C en cour réalisé par Anais
+    //Compatibilité du navigateur en cour réalisé par Nathan
 
     
