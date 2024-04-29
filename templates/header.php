@@ -25,31 +25,34 @@
     <link href="./assets/css/theme.css" rel="stylesheet">
 
 </head>
+
 <body>
-<!-- ======= Mobile nav toggle button ======= -->
-<i class='bx bx-menu mobile-nav-toggle d-xl-none'></i>
 
-<!-- ======= Header ======= -->
-<header id="header">
-    <div class="d-flex flex-column">
+    <!-- ======= Mobile nav toggle button ======= -->
+    <i class='bx bx-menu mobile-nav-toggle d-xl-none'></i>
 
-        <div class="menu-header mt-3">
-            <h1 class="text-light"><a href="<?= home_url(); ?>">MY TOOLBOX</a></h1>
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <div class="d-flex flex-column">
+
+            <div class="menu-header mt-3">
+                <h1 class="text-light"><a href="<?= home_url(); ?>">MY TOOLBOX</a></h1>
+            </div>
+
+            <nav id="navbar" class="nav-menu navbar">
+
+                <ul>
+                    <li><a href="<?= home_url(); ?>" class="nav-link scrollto <?= is_current_url() ? 'active' : '' ?>"><i class="bx bx-home"></i> <span>Accueil</span></a></li>
+                    <li><a href="<?= home_url(); ?>/cesar" class="nav-link scrollto <?= is_current_url('/cesar') ? 'active' : '' ?>"><i class="bx bx-user"></i> <span>Code césar</span></a></li>
+                    <li><a href="<?= home_url(); ?>/euros-dollars" class="nav-link scrollto <?= is_current_url('/euros-dollars') ? 'active' : '' ?>"><i class="bx bx-file-blank"></i> <span>Convertisseur de devise</span></a></li>
+                    <li><a href="<?= home_url(); ?>/litre" class="nav-link scrollto <?= is_current_url('/litre') ? 'active' : '' ?>"><i class="bx bx-water"></i> <span>Convertisseur de litre</span></a></li>
+                    <li><a href="<?= home_url(); ?>/pourcentage" class="nav-link scrollto <?= is_current_url('/pourcentage') ? 'active' : '' ?>"><i class="bx bx-book-content"></i> <span>Pourcentage</span></a></li>
+                    <li><a href="<?= home_url(); ?>/decimal-hexadecimal" class="nav-link scrollto <?= is_current_url('/decimal-hexadecimal') ? 'active' : '' ?>"><i class="bx bx-server"></i> <span>Décimal en hexadécimal</span></a></li>
+                    <li><a href="<?= home_url(); ?>/regle-de-trois" class="nav-link scrollto <?= is_current_url('/regle-de-trois') ? 'active' : '' ?>"><i class='bx bx-ruler'></i> <span>Règle de trois</span></a></li>
+                    <li><a href="<?= home_url(); ?>/admin" class="nav-link scrollto <?= is_current_url('/admin') ? 'active' : '' ?>"><i class="bx bx-envelope"></i> <span>Espace gestion</span></a></li>
+                </ul>
+            </nav><!-- .nav-menu -->
         </div>
+    </header><!-- End Header -->
 
-        <nav id="navbar" class="nav-menu navbar">
-
-            <ul>
-                <li><a href="<?= home_url(); ?>" class="nav-link scrollto <?= is_current_url() ? 'active' : '' ?>"><i class="bx bx-home"></i> <span>Accueil</span></a></li>
-                <li><a href="<?= home_url(); ?>/cesar" class="nav-link scrollto <?= is_current_url('/cesar') ? 'active' : '' ?>"><i class="bx bx-user"></i> <span>Code césar</span></a></li>
-                <li><a href="<?= home_url(); ?>/euros-dollars" class="nav-link scrollto <?= is_current_url('/euros-dollars') ? 'active' : '' ?>"><i class="bx bx-file-blank"></i> <span>Convertisseur de devise</span></a></li>
-                <li><a href="<?= home_url(); ?>/litre" class="nav-link scrollto <?= is_current_url('/litre') ? 'active' : '' ?>"><i class="bx bx-water"></i> <span>Convertisseur de litre</span></a></li>
-                <li><a href="<?= home_url(); ?>/pourcentage" class="nav-link scrollto <?= is_current_url('/pourcentage') ? 'active' : '' ?>"><i class="bx bx-book-content"></i> <span>Pourcentage</span></a></li>
-                <li><a href="<?= home_url(); ?>/decimal-hexadecimal" class="nav-link scrollto <?= is_current_url('/decimal-hexadecimal') ? 'active' : '' ?>"><i class="bx bx-server"></i> <span>Décimal en hexadécimal</span></a></li>
-                <li><a href="<?= home_url(); ?>/regle-de-trois" class="nav-link scrollto <?= is_current_url('/regle-de-trois') ? 'active' : '' ?>"><i class='bx bx-ruler'></i> <span>Règle de trois</span></a></li>
-                <li><a href="<?= home_url(); ?>/admin" class="nav-link scrollto <?= is_current_url('/admin') ? 'active' : '' ?>"><i class="bx bx-envelope"></i> <span>Espace gestion</span></a></li>
-            </ul>
-        </nav><!-- .nav-menu -->
-    </div>
-</header><!-- End Header -->
 <main id="main">
