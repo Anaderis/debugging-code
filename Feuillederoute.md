@@ -27,14 +27,16 @@ La premiere chose a faire est de faire fonctionner le projet pour ce faire devo
 
 Pour la deuxieme etape, nous allons recenser les différents bug reperer dans le site. Puis nous allons proceder a leur resolution.
 
-    Liste des bugs recenser :
+    Liste des bugs recenser utilisation :
 
+        Code cesar qui ne fonctionne pas
+        Bug envoie mail, apostrophe manquante
 
+    Liste des bugs recenser code :
 
-
-
-
-
+        Routage de la page home
+        Indentation fichiers js
+        .htaccess moncheminici bug de routage
 
 
 *3eme Etape Fonctionalité*
@@ -121,6 +123,6 @@ Liste du nettoyage :
 Verification de la compatibilité du navigateur et w3c 
 
     //W3C en cour réalisé par Anais
-    //Compatibilité du navigateur en cour réalisé par Nathan
+    //Compatibilité du navigateur en cour réalisé par Nathan : Firefox, Chrome, Opéra, Explorer
 
     
