@@ -31,12 +31,16 @@ Pour la deuxieme etape, nous allons recenser les différents bug reperer dans le
 
         Code cesar qui ne fonctionne pas
         Bug envoie mail, apostrophe manquante
+        Decimal Hexa ne fonctionnant pas en negatif
+        Icone manquant
 
     Liste des bugs recenser code :
 
-        Routage de la page home
+        Routage de la page home         
         Indentation fichiers js
         .htaccess moncheminici bug de routage
+
+
 
 
 *3eme Etape Fonctionalité*
@@ -69,7 +73,7 @@ A la demande du client des fonctionalités son demandé d'être ajouté au site.
 
     __Validation formulaire Decimal-Hexa__
 
-    Demande que l'envoie des form ce fassent coté serveur, c'est actuellement le cas pour toute les pages excepté la decimal-hexa.
+    Demande que l'envoie des formulaire ce fassent coté serveur, c'est actuellement le cas pour toute les pages excepté la decimal-hexa.
 
     //Tache fini réalisé par Anais :
 

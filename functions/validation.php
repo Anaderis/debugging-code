@@ -23,7 +23,6 @@ function validate(array $items, array $rule_items) {
     $result = array();
     foreach($rule_items as $item_key => $item_value) {
 
-        // Jika terdapat array key '$item_key' pada $items (mis. $item_key berisi string 'name', dan $items berisi array asosiatif $items['name'])
         if (array_key_exists($item_key, $items)) {
             $form_items[$item_key] = trim($items[$item_key]);
             $form_label = $item_value['label'];
