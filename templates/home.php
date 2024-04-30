@@ -18,10 +18,10 @@ if (!empty($_POST)) {
     //  code envoi mail
 
     $submited_items = array(
-        'name' => $_POST['name'],
-        'email' => $_POST['email'],
-        'subject' => $_POST['subject'],
-        'message' => $_POST['message']
+        'name' => htmlspecialchars($_POST['name']),
+        'email' => htmlspecialchars($_POST['email']),
+        'subject' => htmlspecialchars($_POST['subject']),
+        'message' => htmlspecialchars($_POST['message'])
     );
 
 
@@ -54,23 +54,16 @@ if (!empty($_POST)) {
 // Vérifier si la validation a réussi
 $result = check_validation($validated_items);
 
-if (!is_passed($result)) {
-    $messages = $result;
-} else {
-    // Connexion à la base de données
-    $connection  = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
-    if (mysqli_connect_errno()) {
-        throw new Exception("Database connection failed: " . mysqli_connect_error());
+
+    if (!is_passed($result)) {
+        $messages = $result;
+    } else {
+        if (insert('admin_messages', $result)) {
+            $messages['success'][] = 'Message envoyé !';
+        }
+
+
     }
-
-    // Utiliser la fonction insert avec les données validées du formulaire
-    if(insert($connection, 'admin_messages', $result)) {
-        $messages['success'][] = 'Message envoyé !';
-    }
-
-    mysqli_close($connection); // Fermer la connexion après utilisation
-}
-
 
 }
 
@@ -145,14 +138,15 @@ if (!is_passed($result)) {
                         </div>
                         <div class="col-md-6">
                             <div class="text-center text-md-start">
-                                <input type="submit" name="submit-register" value="Register" class="btn  btn-block btn-primary">
+                                <input type="submit" name="submit-register" value="Envoyer" class="btn  btn-block btn-primary">
                                 
                                 <?php if(isset($_POST['submit-register'])){
                                     $to = "anais.kajjaj@outlook.fr";
-                                    $subject = $result['subject'];
-                                    $message = $result['message'];
+                                    $subject = htmlspecialchars_decode($result['subject']);
+                                    $message = htmlspecialchars_decode($result['message']);
 
                                 mail($to, $subject, $message);
+
                                 }
                                 ?>
     

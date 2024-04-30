@@ -28,19 +28,20 @@ function run_query(string $query) {
  *
  * return bolean
  */
-function insert($connection, string $table, array $datas) {
+function insert(string $table, array $datas) {
     $dataColumn = null;
     $dataValues = null;
     foreach($datas as $column => $values) {
         $dataColumn .= $column . ",";
-        $dataValues .= "'" . mysqli_real_escape_string($connection, $values) . "',";
+        $dataValues .= "'" . $values . "',";
     }
 
     $dataColumn = rtrim($dataColumn,',');
     $dataValues = rtrim($dataValues,',');
 
-    $query = "INSERT INTO {$table} ({$dataColumn}) VALUES({$dataValues})";
+    $query = "INSERT INTO {$table} ({$dataColumn}) VALUES ({$dataValues})";
 
+  
     return run_query($query);
 }
 
@@ -72,10 +73,4 @@ function select(string $table, string $column = null, $conditions = array()) {
     }
 }
 
-/**
- *
- */
-function find(string $table, array $conditions) {
-    $result = select($table, null, $conditions);
-    return $result[0];
-}
+
