@@ -49,6 +49,9 @@
                             </div>
                         </div>
                     </div>
+                        <div class="col-lg-2 my-lg-0 my-3">
+                                    <button name="submit" type="submit" class="btn btn-primary btn-block">Calculer</button>
+                        </div>
                 </form>
             </fieldset>
             </div>
@@ -56,7 +59,7 @@
 </section>
 
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         window.addEventListener('load', () => {
             let forms = document.forms;
             let decimal = forms['decimal-hexadecimal'].elements['decimal'];
@@ -89,6 +92,44 @@
             });
 
         });
+    </script> -->
+
+    <script type="text/javascript">
+        window.addEventListener('load', () => {
+        let forms = document.forms;
+
+        for(form of forms){
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                const formData = new FormData(event.target).entries()
+                
+
+                const response = await fetch('/api/post', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(
+                        Object.assign(Object.fromEntries(formData), {form: event.target.name})
+                    )
+                });
+                
+
+                const result = await response.json();
+
+                
+                
+                let inputName = Object.keys(result.data[0])[0];
+                let inputNameTwo = Object.keys(result.data[1])[0];
+
+                console.log(response);
+
+                event.target.querySelector(`input[name="${inputName}"]`).value = result.data[0][inputName];
+                event.target.querySelector(`input[name="${inputNameTwo}"]`).value = result.data[1][inputNameTwo];
+
+
+        });
+    }
+    });
     </script>
 
 <?php template('footer');

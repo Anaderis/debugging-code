@@ -37,7 +37,9 @@ template(
         <div class="row d-flex justify-content-around">
             <fieldset class="col-md-5 col-12 mt-4">
                 <legend>Chiffrer</legend>
-                <form action="" method="POST" name="cesar">
+                <!-- <form action="" method="POST" name="cesar"> -->
+                <form method="POST" name="cesar">
+
                     <div class="form-group row">
                         <div class="col-12">
                             <label for="clear">Le texte à chiffrer</label>
@@ -69,7 +71,9 @@ template(
 
             <fieldset class="col-md-5 col-12 mt-4">
                 <legend>Déchiffrer</legend>
-                <form action="" method="POST" name="cesar">
+                <!-- <form action="" method="POST" name="cesar"> -->
+                <form method="POST" name="cesar">
+
                     <div class="form-group row">
                         <div class="col-12">
                             <label for="result">Le texte à déchiffrer</label>
