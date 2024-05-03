@@ -68,9 +68,9 @@ $logs = select('logs');
                             <?php foreach ($logs as $log): ?>
                                 <tr>
                                     <th scope="row"><?php echo $log['id']; ?></th>
-                                    <td><?php echo $log['form']; ?></td>
-                                    <td><?php echo $log['data']; ?></td>
-                                    <td><?php echo $log['result']; ?></td>
+                                    <td><?php echo htmlspecialchars($log['form']); ?></td>
+                                    <td><?php echo htmlspecialchars($log['data']); ?></td>
+                                    <td><?php echo htmlspecialchars($log['result']); ?></td>
                                 </tr>
                             <?php endforeach; ?>
                             </tbody>

@@ -8,30 +8,37 @@
  * return mixed
  */
 function run_query(string $query) {
-    $connection  = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
+    $connection = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
     if (mysqli_connect_errno()) {
         throw new Exception("Database connection failed: " . mysqli_connect_error());
     }
 
-    prepare($connection, $query);
-    if(!$result = mysqli_query($connection, $prepared)) {
-        throw new Exception(mysqli_error($connection));
-    } else {
-        return $result;
+    $prepared = prepare($connection, $query);
+    if (!$prepared) {
+        throw new Exception("Error preparing SQL statement: " . mysqli_error($connection));
     }
+
+    if (!$prepared->execute()) {
+        throw new Exception("Error executing SQL statement: " . $prepared->error);
+    }
+
+    $result = $prepared->get_result();
+    return htmlspecialchars($result);
 }
 
 /**
  * prepares sql statements
  *
+ * @param mysqli mysql connection
  * @param string mysql query
- * @param string mysql connection credentials
  *
  * return prepared statement
  */
 function prepare($connection, string $query) {
-    return $prepared = $connection->prepare($query);
+    return $connection->prepare($query);
 }
+?>
+
 /**
  * Used to create an INSERT query
  *
