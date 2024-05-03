@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Used to running database query
+ * Used to run database query
  *
  * @param string mysql query
  *
@@ -13,13 +13,25 @@ function run_query(string $query) {
         throw new Exception("Database connection failed: " . mysqli_connect_error());
     }
 
-    if(!$result = mysqli_query($connection, $query)) {
+    prepare($connection, $query);
+    if(!$result = mysqli_query($connection, $prepared)) {
         throw new Exception(mysqli_error($connection));
     } else {
         return $result;
     }
 }
 
+/**
+ * prepares sql statements
+ *
+ * @param string mysql query
+ * @param string mysql connection credentials
+ *
+ * return prepared statement
+ */
+function prepare($connection, string $query) {
+    return $prepared = $connection->prepare($query);
+}
 /**
  * Used to create an INSERT query
  *
