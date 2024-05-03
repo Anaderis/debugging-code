@@ -41,7 +41,7 @@ Pour la deuxieme etape, nous allons recenser les différents bug reperer dans le
         Indentation fichiers js
         .htaccess moncheminici bug de routage
 
-//Correction des bug par Sam, Anais
+//Correction des bug par Sam, Anais, Nathan
 
 
 *3eme Etape Fonctionalité*
