@@ -4,40 +4,41 @@
 
 *Projet et objectif*
 
-Le projet est une est une boite à outils en ligne qui permet de réaliser des calculs et des conversions de manière simple et rapide. 
-Ce projet étant en version bêta, celui ci contien de nombreux bug et erreur a corriger. De plus certaine fonctionalité sont a implanté.
+Le projet est une boite à outils en ligne qui permet de réaliser des calculs et des conversions de manière simple et rapide. 
+Ce projet étant en version bêta, celui ci contient de nombreux bugs et erreurs à corriger. De plus certaines fonctionalités sont à implanter.
 
 
 
 
-*1er Etape  Instalation*
+*1er Etape  Installation*
 
 
-La premiere chose a faire est de faire fonctionner le projet pour ce faire devoir realiser les 3 points suivant :
+La premiàre étape est de faire fonctionner le projet ; nous allons effectuer les 3 points suivants :
 
 1. Créer une base de données "mytoolbox" et importer le fichier "database.sql" pour avoir les données de base.
-2. Renseigner vos variables d'environnement dans le fichier config.php
+2. Renseigner nos variables d'environnement dans le fichier config.php
 3. Créer un virtual host pour le site (mytoolbox.local par exemple)
 
 
 
 
-*2eme Etape Bug et resolution*
+*2eme Etape Bugs et résolution*
 
 
-Pour la deuxieme etape, nous allons recenser les différents bug reperer dans le site. Puis nous allons proceder a leur resolution.
+Pour la deuxième étape, nous allons recenser les différents bugs repérés sur le site. Puis nous allons procéder à leur résolution.
 
-    Liste des bugs recenser utilisation :
+    Liste des bugs recensés lors de l'utilisation du site :
 
-        Code cesar qui ne fonctionne pas
-        Bug envoie mail, apostrophe manquante
-        Decimal Hexa ne fonctionnant pas en negatif
-        Icone manquant
+        Le code Cesar ne fonctionne pas, il ne retourne aucun résultat en chiffrage et déchiffrage
+        Impossible d'envoyer un email depuis le formulaire de la page home.php, par la suite résolution du bug d'apostrophe impossible à insérer dans le texte.
+        La page Decimal Hexadecimal ne fonctionne pas en négatif
+        Les icônes sont absents dans la barre de navigation
 
-    Liste des bugs recenser code :
+    Liste des bugs dans le code :
 
         Routage de la page home         
         Indentation fichiers js
+        ponctuation manquante dans le code javascript de certaines pages (code cesar)
         .htaccess moncheminici bug de routage
 
 
@@ -46,7 +47,7 @@ Pour la deuxieme etape, nous allons recenser les différents bug reperer dans le
 *3eme Etape Fonctionalité*
 
 
-A la demande du client des fonctionalités son demandé d'être ajouté au site. voici les différente fonctionalité demandant leur implantation. 
+A la demande du client des fonctionalités son demandées d'être ajouté au site. voici les différente fonctionalité demandant leur implantation. 
 
 
     __Envoie de mail du formulaire de contact __
@@ -112,21 +113,22 @@ Enregistrement des variables d'environnement dans un fichier .env
 *6eme tri et mise au propre*
 
 
-Du code front et back, sont inutiliser dans le projet. L'objectif est d'essayer de faire le tri pour rendre un code propre. 
+Du code front et back, est inutilisé dans le projet. L'objectif est d'essayer de faire le tri pour obtenir un code propre. 
 
 Liste du nettoyage : 
 
-    Nathan :    Main.js supression de certaine fonction inutiliser
-                Suppresion de commentaire
+    Nathan :    Main.js supression de certaines fonctions inutilisés
+                Suppression de commentaires
 
 
 
 
 *7eme Compatibilité navigateurs et W3C*
 
-Verification de la compatibilité du navigateur et w3c 
+Vérification de la compatibilité du navigateur et w3c : les balises body et main n'étaient pas fermées dans le footer.php.
+Le formulaire de la home.php étant vide dans l'attribut action, cela ne correspondait pas au standard du W3C
 
-    //W3C en cour réalisé par Anais
+    //W3C en cours réalisé par Anais
     //Compatibilité du navigateur en cour réalisé par Nathan : Firefox, Chrome, Opéra, Explorer
 
     
