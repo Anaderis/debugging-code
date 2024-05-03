@@ -8,8 +8,7 @@ $data = json_decode($json_data, true);
 
 if ($data && isset($data['rates'])) {
     $rates = $data['rates'];
-
-    // Récupérer les noms de devises
+    
     $currencies = array_keys($rates);
 ?>
 

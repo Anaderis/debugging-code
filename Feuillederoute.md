@@ -16,8 +16,9 @@ Ce projet étant en version bêta, celui ci contien de nombreux bug et erreur a 
 La premiere chose a faire est de faire fonctionner le projet pour ce faire devoir realiser les 3 points suivant :
 
 1. Créer une base de données "mytoolbox" et importer le fichier "database.sql" pour avoir les données de base.
-2. Renseigner vos variables d'environnement dans le fichier config.php
-3. Créer un virtual host pour le site (mytoolbox.local par exemple)
+2. Renseigner vos variables d'environnement dans le fichier config.php          
+3. Créer un virtual host pour le site (mytoolbox.local par exemple)             //Tache fini réalisé par Sam
+          
 
 
 
@@ -40,7 +41,7 @@ Pour la deuxieme etape, nous allons recenser les différents bug reperer dans le
         Indentation fichiers js
         .htaccess moncheminici bug de routage
 
-
+//Correction des bug par Sam, Anais
 
 
 *3eme Etape Fonctionalité*
@@ -115,6 +116,8 @@ Enregistrement des variables d'environnement dans un fichier .env
 Du code front et back, sont inutiliser dans le projet. L'objectif est d'essayer de faire le tri pour rendre un code propre. 
 
 Liste du nettoyage : 
+
+    Ruben :     Correction surplus code et erreur
 
     Nathan :    Main.js supression de certaine fonction inutiliser
                 Suppresion de commentaire
