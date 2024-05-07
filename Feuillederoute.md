@@ -4,16 +4,16 @@
 
 *Projet et objectif*
 
-Le projet est une est une boite à outils en ligne qui permet de réaliser des calculs et des conversions de manière simple et rapide. 
-Ce projet étant en version bêta, celui ci contien de nombreux bug et erreur a corriger. De plus certaine fonctionalité sont a implanté.
+Le projet est une boite à outils en ligne qui permet de réaliser des calculs et des conversions de manière simple et rapide. 
+Ce projet étant en version bêta, celui-ci contient de nombreux bugs et erreurs a corriger. De plus certaines fonctionalités sont a implanter.
 
 
 
 
-*1er Etape  Instalation*
+*1er Etape  Installation*
 
 
-La premiere chose a faire est de faire fonctionner le projet pour ce faire devoir realiser les 3 points suivant :
+La premiere chose a faire est de faire fonctionner le projet pour ce faire devoir realiser les 3 points suivants :
 
 1. Créer une base de données "mytoolbox" et importer le fichier "database.sql" pour avoir les données de base.
 2. Renseigner vos variables d'environnement dans le fichier config.php          
@@ -28,14 +28,14 @@ La premiere chose a faire est de faire fonctionner le projet pour ce faire devo
 
 Pour la deuxieme etape, nous allons recenser les différents bug reperer dans le site. Puis nous allons proceder a leur resolution.
 
-    Liste des bugs recenser utilisation :
+    Liste des bugs recenses à l'utilisation :
 
         Code cesar qui ne fonctionne pas
-        Bug envoie mail, apostrophe manquante
+        Bug envoi mail, apostrophe manquante
         Decimal Hexa ne fonctionnant pas en negatif
         Icone manquant
 
-    Liste des bugs recenser code :
+    Liste des bugs recenses code :
 
         Routage de la page home         
         Indentation fichiers js
@@ -47,12 +47,12 @@ Pour la deuxieme etape, nous allons recenser les différents bug reperer dans le
 *3eme Etape Fonctionalité*
 
 
-A la demande du client des fonctionalités son demandé d'être ajouté au site. voici les différente fonctionalité demandant leur implantation. 
+A la demande du client des fonctionalités ont demandés à être ajouté au site. voici les différentes fonctionalités demandant leur implantation. 
 
 
-    __Envoie de mail du formulaire de contact __
+    __Envoi de mail du formulaire de contact __
 
-    Lors de la validation du formulaire de contact un mail est envoyer a l'administrateur.
+    Lors de la validation du formulaire de contact un mail est envoyé a l'administrateur.
 
     //Tache fini réalisé par Anais
 
