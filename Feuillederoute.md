@@ -4,78 +4,78 @@
 
 *Projet et objectif*
 
-Le projet est une est une boite à outils en ligne qui permet de réaliser des calculs et des conversions de manière simple et rapide. 
-Ce projet étant en version bêta, celui ci contien de nombreux bug et erreur a corriger. De plus certaine fonctionalité sont a implanté.
+Le projet est une boite à outils en ligne qui permet de réaliser des calculs et des conversions de manière simple et rapide. 
+Ce projet étant en version bêta, celui-ci contient de nombreux bugs et erreurs à corriger. De plus certaines fonctionnalités sont à implanter.
 
 
 
 
-*1er Etape  Instalation*
+*1er Etape Installation*
 
 
-La premiere chose a faire est de faire fonctionner le projet pour ce faire devoir realiser les 3 points suivant :
+La première étape est de faire fonctionner le projet via les 3 points suivants :
 
 1. Créer une base de données "mytoolbox" et importer le fichier "database.sql" pour avoir les données de base.
-2. Renseigner vos variables d'environnement dans le fichier config.php
-3. Créer un virtual host pour le site (mytoolbox.local par exemple)
+2. Renseigner vos variables d'environnement dans le fichier config.php          
+3. Créer un virtual host pour le site (mytoolbox.local par exemple)             //Tache fini réalisé par Sam
+          
 
 
 
 
-*2eme Etape Bug et resolution*
+*2eme Etape Bug et résolution*
 
 
-Pour la deuxieme etape, nous allons recenser les différents bug reperer dans le site. Puis nous allons proceder a leur resolution.
+Pour la deuxième étape, nous allons recenser les différents bug repérés dans le site. Puis nous allons procéder à leur résolution.
 
-    Liste des bugs recenser utilisation :
+    Liste des bugs recensés à l'utilisation :
 
-        Code cesar qui ne fonctionne pas
-        Bug envoie mail, apostrophe manquante
-        Decimal Hexa ne fonctionnant pas en negatif
-        Icone manquant
+        Code césar qui ne fonctionne pas
+        Bug envoi d'email, apostrophe manquante
+        Code césar ne fonctionne pas en négatif
+        Icônes manquants
 
-    Liste des bugs recenser code :
+    Liste des bugs recensés dans le code :
 
         Routage de la page home         
         Indentation fichiers js
         .htaccess moncheminici bug de routage
 
+//Correction des bugs par Sam, Anais, Nathan
 
 
-
-*3eme Etape Fonctionalité*
-
-
-A la demande du client des fonctionalités son demandé d'être ajouté au site. voici les différente fonctionalité demandant leur implantation. 
+*3eme Etape Fonctionnalités*
 
 
-    __Envoie de mail du formulaire de contact __
+A la demande du client des fonctionalités ont été ajoutés au site. Voici les différentes fonctionalités :
 
-    Lors de la validation du formulaire de contact un mail est envoyer a l'administrateur.
+    __Envoi de mail du formulaire de contact __
 
-    //Tache fini réalisé par Anais
+    Lors de la validation du formulaire de contact un mail est envoyé a l'administrateur. Configuration de l'envoi d'email sur Laragon
+
+    //Tâche fini réalisé par Anais
 
 
      __Choix de la devise__
 
     Ajouter la possibilité de changer les devises par l'utilisateur dans la page euro dollar.
 
-    //Tache fini réalisé par Nathan : Creation de la fonction convertCurrency + utilisation de l'api https://open.er-api.com/
+    //Tâche fini réalisé par Nathan : Création de la fonction convertCurrency + utilisation de l'api https://open.er-api.com/
 
 
      __Conversion Litre Mililitre__
 
-    Dans la page espace gestion on retrouve un mail avec la demande d'ajouter un convertisseur littre -> Mililitre.
+    Dans la page espace gestion on retrouve un mail avec la demande d'ajouter un convertisseur litre -> Mililitre.
 
-    //Tache fini réalisé par Nathan : En partant du modele euro -> Dollar Modification de la fonction
+    //Tâche réalisé par Nathan : En partant du modele euro -> Dollar Modification de la fonction
 
 
 
     __Validation formulaire Decimal-Hexa__
 
-    Demande que l'envoie des formulaire ce fassent coté serveur, c'est actuellement le cas pour toute les pages excepté la decimal-hexa.
+    Demande que l'envoi des formulaires se fasse coté serveur, c'était le cas pour toute les pages excepté la decimal-hexa.
 
-    //Tache fini réalisé par Anais :
+    //Tâche réalisé par Anais :
 
 
 
@@ -116,6 +116,8 @@ Du code front et back, sont inutiliser dans le projet. L'objectif est d'essayer 
 
 Liste du nettoyage : 
 
+    Ruben :     Correction surplus code et erreur
+
     Nathan :    Main.js supression de certaine fonction inutiliser
                 Suppresion de commentaire
 
@@ -124,9 +126,9 @@ Liste du nettoyage :
 
 *7eme Compatibilité navigateurs et W3C*
 
-Verification de la compatibilité du navigateur et w3c 
+Vérification de la compatibilité du navigateur et w3c 
 
-    //W3C en cour réalisé par Anais
+    //W3C réalisé par Anais
     //Compatibilité du navigateur en cour réalisé par Nathan : Firefox, Chrome, Opéra, Explorer
 
     
